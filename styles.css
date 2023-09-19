@@ -18,4 +18,30 @@ h2 {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;}
+  text-align: center;}/* styles.css */
+
+  /* Estilos para el contenedor del encabezado h1 */
+  .header-container {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  /* Estilos para el encabezado h1 dentro del contenedor */
+  .header-container h1 {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Estilos para el contenedor del agradecimiento h2 */
+  .thanks-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el agradecimiento h2 dentro del contenedor */
+  .thanks-container h2 {
+    margin: 0;
+    color: #007bff;
+  }
+  
