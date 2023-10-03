@@ -1,47 +1,243 @@
-/* Estilos para el título principal */
+/* Estilos generales para títulos */
 h1 {
   font-size: 36px;
-  color: #2c3e50;
+  color: #3590eb;
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Estilos para los títulos secundarios */
 h2 {
   font-size: 24px;
-  color: #34495e;
+  color: #0080ff;
   font-style: italic;
+  margin-top: 0;
+}
+
+/* Estilos para contenedores principales con imágenes de fondo */
+.container,
+.container-depositos,
+.container-retiros,
+.container-saldo {
+  padding: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+}
+.container-finalizar{
+
+  padding-top: 100px;
+}
+
+.container {
+  background-image: url(../root/img/estrategia-de-marketing-bancos.jpg);
+}
+
+.container-depositos {
+  background-image: url(../root/img/depocitos.avif);
+}
+
+.container-retiros {
+  background-image: url(../root/img/retiro.jpg);
+}
+
+.container-saldo {
+  background-image: url(../root/img/saldo.jpg);
+}
+
+.container-finalizar {
+  background-image: url(../root/img/final.jpg);
+ 
+}
+
+/* Estilos para el encabezado h1 dentro del contenedor */
+.header-container {
+  text-align: center;
+  background-color: #0056b3;
+  padding: 10px;
+}
+
+.header-container h1 {
+  margin: 0;
+  color: antiquewhite;
+}
+
+/* Estilos para el contenedor del agradecimiento h2 */
+.thanks-container {
+  text-align: center;
   margin-top: 20px;
 }
-/* container de la imagen */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;}/* styles.css */
 
-  /* Estilos para el contenedor del encabezado h1 */
+.thanks-container h2 {
+  margin: 0;
+  color: #007bff;
+}
+
+/* Estilos para los contenedores con botones */
+.button-container {
+  margin: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.button-container button {
+  padding: 20px 30px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el footer */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Estilos para el texto del footer */
+.footer-container p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Estilos para el div de información de saldo */
+#saldoInfo,
+#saldof
+{
+  font-size: 28px;
+  color: #333;
+  margin-top:20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+/* Estilos generales para los botones */
+.button-container {
+  text-align: center;
+  margin: 10px;
+}
+
+.button-container button {
+  padding: 20px 30px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 200px; 
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el encabezado */
+.header-container {
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+.header-container h1 {
+  margin: 0;
+}
+
+/* Estilos para el agradecimiento */
+.thanks-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Estilos para el footer */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container {
+    margin: 10px 0;
+  }
+
+  .button-container button {
+    width: 80%;
+  }
+}
+/* Estilos para el encabezado */
+.header-container {
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+.header-container h1 {
+  margin: 0;
+}
+
+/* Estilos para el contenedor de saldo */
+.container-saldo {
+  text-align: center;
+  padding: 120px;
+}
+
+/* Estilos para el footer */
+.footer-container {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
   .header-container {
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 10px;
+    padding: 20px;
   }
-  
-  /* Estilos para el encabezado h1 dentro del contenedor */
-  .header-container h1 {
-    margin: 0;
-    color: #333;
+
+  .container-saldo {
+    padding: 20px;
   }
-  
-  /* Estilos para el contenedor del agradecimiento h2 */
-  .thanks-container {
-    text-align: center;
-    margin-top: 20px;
+
+  .footer-container {
+    padding: 20px;
   }
-  
-  /* Estilos para el agradecimiento h2 dentro del contenedor */
-  .thanks-container h2 {
-    margin: 0;
-    color: #007bff;
-  }
-  
+}
+.container-balance {
+  font-size: 28px;
+  color: #333;
+  margin-top:20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

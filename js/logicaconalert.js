@@ -7,10 +7,10 @@
 // Cuando opcion es '3', se permite al usuario depositar dinero.
 // Cuando ninguna de las opciones anteriores se cumple, se muestra un mensaje de opción inválida.
 
-let saldo = 6000;
+ saldo = 6000;
 let transacciones = [];
 
-let opcion = prompt('Elija una opción: 1 - Retirar plata \n 2 - Tu saldo \n 3 - Depósito de dinero \n Para finalizar presiona "x"');
+let opcion = prompt('Elija una opción: 1 - Retiros \n 2 - Saldo \n 3 - Depósitos \n Para finalizar presiona "x"');
 
 while (opcion !== 'x') {
     switch (opcion) {
@@ -21,7 +21,7 @@ while (opcion !== 'x') {
                 transacciones.push({ tipo: 'retiro', monto: retiro });
                 alert('Has retirado $' + retiro + ' de tu cuenta. Tu nuevo saldo es $' + saldo);
             } else {
-                alert('Sus fondos son insuficientes');
+                alert('Sus fondos son insuficientes');let
             }
             break;
         case '2':
@@ -37,7 +37,7 @@ while (opcion !== 'x') {
             alert('Elegiste una opción inválida');
             break;
     }
-    opcion = prompt('Elija una opción: 1 - Retirar plata \n 2 - Tu saldo \n 3 - Depósito de dinero \n Para finalizar presiona "x"');
+    opcion = prompt('Elija una opción: 1 - Retiros \n 2 - Saldo \n 3 - Depósitos \n Para finalizar presiona "x"');
 }
 
 // Este arrays permite el historial de transacciones para luego imprimir
@@ -50,13 +50,13 @@ for (let i = 0; i < transacciones.length; i++) {
 alert('Gracias por usar nuestros servicios. Tu saldo final es $' + saldo);
 
 // Búsqueda de transacciones de retiro
-const retiros = transacciones.filter(transaccion => transaccion.tipo === 'retiro');
+const retiros = transacciones.filter(transaccion => transaccion.tipo === 'retiros');
 
 // Búsqueda de transacciones de depósito
-const depositos = transacciones.filter(transaccion => transaccion.tipo === 'depósito');
+const depositos = transacciones.filter(transaccion => transaccion.tipo === 'depósitos');
 
-console.log('Transacciones de retiro:', retiros);
-console.log('Transacciones de depósito:', depositos);
+console.log('Transacciones de retiros:', retiros);
+console.log('Transacciones de depósitos:', depositos);
 
 // Búsqueda de transacciones con montos mayores a 1000
 const montosMayoresA1000 = transacciones.filter(transaccion => transaccion.monto > 1000);
@@ -65,9 +65,9 @@ console.log('Transacciones con montos mayores a $1000:', montosMayoresA1000);
 
 // Cálculo del saldo final después de todas las transacciones
 const saldoFinal = transacciones.reduce((saldo, transaccion) => {
-    if (transaccion.tipo === 'retiro') {
+    if (transaccion.tipo === 'retiros') {
         return saldo - transaccion.monto;
-    } else if (transaccion.tipo === 'depósito') {
+    } else if (transaccion.tipo === 'depósitos') {
         return saldo + transaccion.monto;
     }
     return saldo;
