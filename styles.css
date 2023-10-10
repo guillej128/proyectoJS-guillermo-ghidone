@@ -33,23 +33,23 @@ h2 {
 }
 
 .container {
-  background-image: url(../root/img/estrategia-de-marketing-bancos.jpg);
+  background-image: url(./img/estrategia-de-marketing-bancos.jpg);
 }
 
 .container-depositos {
-  background-image: url(../root/img/depocitos.avif);
+  background-image: url(./img/depocitos.avif);
 }
 
 .container-retiros {
-  background-image: url(../root/img/retiro.jpg);
+  background-image: url(./img/retiro.jpg);
 }
 
 .container-saldo {
-  background-image: url(../root/img/saldo.jpg);
+  background-image: url(./img/saldo.jpg);
 }
 
 .container-finalizar {
-  background-image: url(../root/img/final.jpg);
+  background-image: url(./img/final.jpg);
  
 }
 
