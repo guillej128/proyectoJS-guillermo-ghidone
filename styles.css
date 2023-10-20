@@ -329,6 +329,12 @@ label {
   background-color: #fff;
   width: 80%;
   text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 #transaccionesRetiros {
