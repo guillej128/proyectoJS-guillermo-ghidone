@@ -1,17 +1,25 @@
 /* Estilos generales para títulos */
-h1 {
+h1,h2,h3,h4 {
   font-size: 36px;
-  color: #3590eb;
+  color: white;
   margin-bottom: 20px;
   text-align: center;
 }
 
-h2 {
+h5 {
   font-size: 24px;
-  color: #0080ff;
+  color: #8cc2fc;
   font-style: italic;
   margin-top: 0;
 }
+h6 {
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 
 /* Estilos para contenedores principales con imágenes de fondo */
 .container,
@@ -57,21 +65,26 @@ h2 {
 .header-container {
   text-align: center;
   background-color: #0056b3;
-  padding: 10px;
+  padding: 20px; 
 }
 
 .header-container h1 {
   margin: 0;
-  color: antiquewhite;
+  color: white;
+  font-size: 36px; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  font-weight: bold; 
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para el contenedor del agradecimiento h2 */
+/* Estilos para el contenedor del agradecimiento h5 */
 .thanks-container {
   text-align: center;
   margin-top: 20px;
 }
 
-.thanks-container h2 {
+.thanks-container h5 {
   margin: 0;
   color: #007bff;
 }
@@ -91,11 +104,23 @@ h2 {
   cursor: pointer;
   font-size: 16px;
   width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 10px; 
 }
 
 .button-container button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
+
+.button-container button:focus {
+  outline: none;
+}
+
+.button-container button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Estilos para el footer */
 .footer-container {
@@ -147,6 +172,57 @@ h2 {
 
 .button-container button:hover {
   background-color: #0056b3;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px; 
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los campos de entrada (inputs) */
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px; 
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+/* Estilos para los mensajes (divs) */
+#message, #messaged {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 30px;
+  padding: 5px;
+  border-radius: 25px; 
+  background-color: #EAEAEA;
+  border: 1px solid #000000
+}
+
+/* Estilos para las etiquetas label */
+label {
+  display: block; 
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+/* Estilos específicos para las etiquetas en los formularios de retiros y depósitos */
+#retiroForm label,
+#depositoForm label {
+  color: #0056b3; 
 }
 
 /* Estilos para el encabezado */
@@ -213,9 +289,14 @@ h2 {
 .footer-container {
   background-color: #333;
   color: #fff;
-  padding: 10px;
   text-align: center;
+  padding: 10px;
+  position: static;
+  bottom: 0;
+  width: 100%;
 }
+
+
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
@@ -232,12 +313,68 @@ h2 {
   }
 }
 .container-balance {
-  font-size: 28px;
-  color: #333;
-  margin-top:20px;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
   padding: 20px;
-  border: 5px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+#transaccionesRetiros, #transaccionesDepositos, #transaccionesMayoresA1000 {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+#transaccionesRetiros {
+  background-color: #FFCCCC;
+}
+
+#transaccionesDepositos {
+  background-color: #CCFFCC; 
+}
+
+#transaccionesMayoresA1000 {
+  background-color: #CCE5FF; 
+}
+  /* Estilo para el contenedor de cada div */
+  .currency-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+   
+  }
+
+  /* Estilo para las imágenes de las banderas */
+  .currency-info img {
+    width: 30px; 
+    height: 20px; 
+    margin-right: 10px; 
+  }
+    /* Estilos para el texto dentro de las etiquetas <p> */
+    .container p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    /* Estilo para los contenedores individuales de cotización */
+    .currency-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+  
+    /* Estilo para las imágenes de las banderas */
+    .currency-info img {
+      width: 30px;
+      height: 20px;
+      margin-right: 10px;
+    }

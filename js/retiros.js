@@ -37,3 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  document.getElementById('retiroForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const retiroAmount = document.getElementById('retiroAmount').value;
+
+    // Muestra una notificación Toastify y muestro el uso de las librerias
+    Toastify({
+      text: `Has retirado ${retiroAmount} Pesos.`,
+      duration: 13000,
+      close: true,
+      gravity: 'top',
+      position: 'right',
+    }).showToast();
+  });
+
+    

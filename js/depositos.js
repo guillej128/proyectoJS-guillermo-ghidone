@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const depositoForm = document.getElementById("depositoForm");
   const depositoAmount = document.getElementById("depositoAmount");
   const saldoInfo = document.getElementById("saldoInfo");
-  const message = document.getElementById("message");
+  const message = document.getElementById("messaged");
 
   const saldoKey = "saldo";
   const transaccionesKey = "transacciones";
@@ -31,4 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     depositoAmount.value = "";
   });
+});
+document.getElementById('depositoForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const depositoAmount = document.getElementById('depositoAmount').value;
+
+  // Muestra una notificación Toastify y demusestro uso de librerias
+  Toastify({
+    text: `Has depositado ${depositoAmount} Pesos.`,
+    duration: 13000,
+    close: true,
+    gravity: 'top',
+    position: 'right',
+  }).showToast();
 });

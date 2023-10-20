@@ -4,33 +4,108 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <title>Simulador interactivo - Guille</title>
 </head>
 <body>
   <header class="header-container">
-    <h1>Banco Principal</h1>
+   <h1>Banco Principal</h1>
   </header>
   <div class="container">
+    <p>La cotización actual del dólar (USD):</p>
+<div>
+  <span class="currency-info">
+    <img src="./img/union-euro.png" alt="EUR">
+    Cotización de EUR: <span id="exchangeRate-EUR"></span>
+  </span>
+</div>
+<div>
+  <span class="currency-info">
+    <img src="./img/reino-unido.png" alt="GBP">
+    Cotización de GBP: <span id="exchangeRate-GBP"></span>
+  </span>
+</div>
+<div>
+  <span class="currency-info">
+    <img src="./img/australia.png" alt="AUD">
+    Cotización de AUD: <span id="exchangeRate-AUD"></span>
+  </span>
+</div>
+<div>
+  <span class="currency-info">
+    <img src="./img/argentina.png" alt="ARS">
+    Cotización de ARG: <span id="exchangeRate-ARS"></span>
+  </span>
+</div>
+<div>
+  <span class="currency-info">
+    <img src="./img/uruguay.png" alt="UYU">
+    Cotización de UY: <span id="exchangeRate-UYU"></span>
+  </span>
+</div>
+
     <div class="button-container">
-      <a href="Retiros.html"><button>Retiros</button></a>
+      <a href="#retiros"><button><i class="fas fa-arrow-down"></i> Retiros</button></a>
     </div>
     <div class="button-container">
-      <a href="depositos.html"><button>Depósitos</button></a>
+      <a href="#depositos"><button><i class="fas fa-arrow-up"></i> Depósitos</button></a>
     </div>
     <div class="button-container" id="saldo">
-      <a href="saldo.html"><button>Saldo</button></a>
+      <a href="#Saldo"><button><i class="fas fa-money-bill-wave"></i> Saldo</button></a>
     </div>
     <div class="button-container" id="Finalizar">
-      <a href="finalizar.html"><button>Finalizar operación</button></a>
+      <a href="./finalizar.html"><button><i class="fas fa-sign-out-alt"></i> Finalizar operación</button></a>
     </div>
   </div>
-  <div class="thanks-container">
-    <h2>Gracias por confiar en nosotros</h2>
+  
+  <header>
+    <div class="header-container">
+      <h2 id="retiros">Retiros</h2>
+    </div>
+  </header>
+  <div class="container-retiros">
+    <form id="retiroForm">
+      <label for="retiroAmount">Monto a retirar:</label>
+      <input type="number" id="retiroAmount" required>
+      <button type="submit">Retirar</button>
+    </form>
+    <div id="message"></div>
   </div>
+
+  <div class="header-container">
+    <h3 id="depositos">Depósitos</h3>
+  </div>
+  <div class="container-depositos">
+    <form id="depositoForm">
+      <label for "depositoAmount">Monto a depositar:</label>
+      <input type="number" id="depositoAmount" required>
+      <button type="submit">Depositar</button>
+    </form>
+    <div id="messaged"></div>
+  </div>
+
+  <header class="header-container">
+    <h4 id="Saldo">Saldo</h4>
+  </header>
+  <div class="container-saldo">
+    <div id="saldoInfo"></div>
+  </div>
+
+  <div class="thanks-container">
+    <h5>Gracias por confiar en nosotros</h5>
+  </div>
+
   <footer class="footer-container">
     <p>&copy; 2023 Banco Principal - Todos los derechos reservados.</p>
+    <a href="index.html">Volver a la página de inicio</a>
   </footer>
+
+  <script src="./js/saldo.js"></script>
+  <script src="./js/retiros.js"></script>
+  <script src="./js/depositos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/Api.js"></script>
+
 </body>
 </html>
-
