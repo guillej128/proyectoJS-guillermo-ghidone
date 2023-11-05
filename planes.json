@@ -1,0 +1,34 @@
+[
+    {
+      "categoria": "Blue",
+      "precio": "Gratis",
+      "credito": "no",
+      "valorencompras": "Sin valor en compras"
+    },
+    {
+      "categoria": "Green",
+      "precio": "$450",
+      "credito": "si",
+      "valorencompras": "$5000"
+    },{
+      "categoria": "Red",
+      "precio": "$700",
+      "credito": "si",
+      "valorencompras": "$15000"
+    },{
+      "categoria": "Silver",
+      "precio": "$1000",
+      "credito": "si",
+      "valorencompras": "$30000"
+    },{
+      "categoria": "Gold",
+      "precio": "$2000",
+      "credito": "si",
+      "valorencompras": "$100000"
+    },{
+      "categoria": "Black",
+      "precio": "$5700",
+      "credito": "si",
+      "valorencompras": "Ilimitado"
+    }
+  ]

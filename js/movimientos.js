@@ -14,13 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Filtrar transacciones de retiros
   const retiros = transacciones.filter(transaccion => transaccion.tipo === "retiro");
-  transaccionesRetiros.textContent = JSON.stringify(retiros);
+  mostrarTransaccionesEnLista(retiros, transaccionesRetiros);
 
   // Filtrar transacciones de depósitos
   const depositos = transacciones.filter(transaccion => transaccion.tipo === "depósito");
-  transaccionesDepositos.textContent = JSON.stringify(depositos);
+  mostrarTransaccionesEnLista(depositos, transaccionesDepositos);
 
   // Filtrar transacciones con montos mayores a 1000
   const montosMayoresA1000 = transacciones.filter(transaccion => transaccion.monto > 1000);
-  transaccionesMayoresA1000.textContent = JSON.stringify(montosMayoresA1000);
+  mostrarTransaccionesEnLista(montosMayoresA1000, transaccionesMayoresA1000);
 });
+
+function mostrarTransaccionesEnLista(transacciones, elemento) {
+  const lista = document.createElement("ul");
+  transacciones.forEach(transaccion => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${transaccion.tipo}: $${transaccion.monto.toFixed(2)}`;
+    lista.appendChild(listItem);
+  });
+  elemento.appendChild(lista);
+}
